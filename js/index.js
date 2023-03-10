@@ -1,4 +1,5 @@
 const currentDate = new Date();
+const CWB_API_KEY ="CWB-CB520137-D9B3-419C-90C5-36034BA1BCB3";
 const dateString = currentDate.toLocaleDateString("zh-TW", {
   year: "numeric",
   month: "long",

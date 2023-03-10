@@ -1,4 +1,6 @@
 const date = new Date();
+const CWB_API_KEY = "CWB-CB520137-D9B3-419C-90C5-36034BA1BCB3";
+
 // 加入時間資訊
 const setDtate = function(){ 
     const weekdayArry =["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
@@ -145,7 +147,6 @@ const changeUVI = function(UVI){
     }
 }
 const fetchAPI = function(){
-    const API_KEY="CWB-A3D31E92-A9C0-49A3-A368-F98481A37B7C";
     const URL= "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=";
     const NorthernTaiwan =[12, 9, 3, 13, 21, 0];
     const CentralTaiwan =[2, 20, 8, 10];
@@ -153,7 +154,7 @@ const fetchAPI = function(){
     const EasternTaiwan =[4, 14, 16];
     const Outlying_Islands =[11, 1, 15];
 
-    fetch(URL + API_KEY).then((response)=>{
+    fetch(URL + CWB_API_KEY).then((response)=>{
         return response.json();
     }).then((data)=>{
         records = data.records;

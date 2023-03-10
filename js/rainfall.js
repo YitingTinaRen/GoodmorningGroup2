@@ -1,3 +1,4 @@
+const CWB_API_KEY = "CWB-CB520137-D9B3-419C-90C5-36034BA1BCB3";
 
 window.onload=function(){
     fetchPerdayPrecipitation();
@@ -5,8 +6,7 @@ window.onload=function(){
 }
 
 function fetchPerdayPrecipitation(){
-    const apiKey = "CWB-A3D31E92-A9C0-49A3-A368-F98481A37B7C"
-    const weatherUrl = `https://opendata.cwb.gov.tw/api/v1/rest/datastore/C-B0025-001?Authorization=${apiKey}`
+    const weatherUrl = `https://opendata.cwb.gov.tw/api/v1/rest/datastore/C-B0025-001?Authorization=${CWB_API_KEY}`
     fetch(weatherUrl,{
         method:"GET",
     }).then(response=>{
