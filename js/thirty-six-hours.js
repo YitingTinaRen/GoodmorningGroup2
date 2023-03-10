@@ -2,6 +2,8 @@ const line = document.getElementById("line");
 const icon = document.getElementById("icon");
 const windowWidth = window.innerWidth;
 const rect = line.getBoundingClientRect();
+const CWB_API_KEY = "CWB-CB520137-D9B3-419C-90C5-36034BA1BCB3";
+
 
 getWeather();
 showCurrentTime();
@@ -74,8 +76,7 @@ function showCurrentTime() {
 
 // Fetch to get weather and render the result onto the page
 function getWeather() {
-    const apiKey = "CWB-A3D31E92-A9C0-49A3-A368-F98481A37B7C"
-    const weatherUrl = `https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${apiKey}`
+    const weatherUrl = `https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${CWB_API_KEY}`
 
     fetch(weatherUrl)
     .then(res => {return res.json();})
